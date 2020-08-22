@@ -4,7 +4,7 @@
   "description": "Getir APP",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config ./app.js",
+    "start": "node app.js",
     "lint": "eslint .",
     "test": "mocha",
     "coverage": "clear; jest --verbose --coverage"
