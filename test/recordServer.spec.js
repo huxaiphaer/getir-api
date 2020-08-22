@@ -25,6 +25,7 @@ beforeAll(() => {
 
 afterAll(() => {
   mongooseDBConnector.disconnect();
+
   return serverHandle.close();
 });
 
@@ -44,7 +45,7 @@ describe("API tests", () => {
     })
       .then(response => response.json())
       .then(jsonData => {
-        return expect(jsonData.records.length).toEqual(0);
+        return expect(jsonData.records.length).toEqual(2);
       });
   });
   test("should get INVALID_REQUEST_PARAMETERS with missing params", () => {

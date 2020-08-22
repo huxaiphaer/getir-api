@@ -27,9 +27,11 @@ describe("Data RecordManager", () => {
     const minCount = 2990;
     const maxCount = 3000;
 
+
     return recordManager.getData(startDate, endDate, minCount, maxCount)
       .then(records => {
-        return expect(records.length).toEqual(0);
+        jest.setTimeout(6000);
+        return expect(records.length).toEqual(2);
       });
   });
 

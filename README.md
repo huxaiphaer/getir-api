@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/huxaiphaer/getir-api.svg?branch=master)](https://travis-ci.com/huxaiphaer/getir-api)
+
 # GETIR API
  
 ### Requirements for this Project :
