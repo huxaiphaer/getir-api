@@ -2,10 +2,15 @@
 
 # GETIR API
  
-### Requirements for this Project :
+### Requirements/Tools used for this Project :
 1. Node.js
-2. Eslint
-3. Mongo DB
+2. Express
+3. Eslint
+4. MongoDB
+5. Travis (CI/CD)
+6. Mocha & Chai
+7. Heroku
+
 
 ## Installation.
 
