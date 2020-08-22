@@ -2,10 +2,15 @@
 
 # GETIR API
  
-### Requirements for this Project :
+### Requirements/Tools used for this Project :
 1. Node.js
-2. Eslint
-3. Mongo DB
+2. Express
+3. Eslint
+4. MongoDB
+5. Travis (CI/CD)
+6. Mocha & Chai
+7. Heroku
+
 
 ## Installation.
 
@@ -38,23 +43,25 @@ The above endpoint uses a **POST** method.
 
 ### Accessing the heroku link :
 
-This is the hosted endpoint :
+This is where the api is hosted
+
 ```
-https://getir-app-huxy.herokuapp.com/v1/api/data
+https://getir-app-huxy.herokuapp.com
 ```
 
+and below are the remote endpoints :
+
+| HTTP Method   | End Point               | Action          |
+| ------------- | ---------------------   |-----------------|
+| POST          | /v1/api/data            |Filter Records   |
+| GET          | /v1/api/allData          |Get all Records   |
 
 ### Run tests locally.
 
 Running the tests of the project :
 
 ```
-npm run test
-```
-Running with coverage :
-
-```
-npm run coverage
+npm test
 ```
 
 ### Contributors.

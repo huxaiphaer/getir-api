@@ -1,22 +1,23 @@
-const MongooseDBConnector = require("./src/mongodb/mongooseDBConnector");
-const RecordManager = require("./src/controller/RecordManager");
-const Server = require("./src/Server");
-const dotenv = require("dotenv");
+let express = require('express');
+const mongodb = require('./src/mongodb/mongodb.utils')
+const dotenv = require('dotenv')
+dotenv.config()
 
-let serverInstance;
-let mongooseDBConnector;
-let recordManager;
+let port = process.env.PORT;
+let app = express();
 
-function main() {
-  dotenv.config();
 
-  mongooseDBConnector = new MongooseDBConnector();
+let apiRoutes = require('./src/routes/api-routes')
 
-  mongooseDBConnector.connectToDB().then(() => {
-    recordManager = new RecordManager(mongooseDBConnector);
-    serverInstance = new Server(recordManager);
-    return serverInstance.listen();
-  });
-}
+app.use(express.json());
 
-main();
+app.use('/v1/api', apiRoutes)
+
+mongodb.connect()
+
+app.listen(port, () => {
+    console.log("Application is running app on port ", port)
+});
+
+
+module.exports = app
