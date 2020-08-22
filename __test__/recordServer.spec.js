@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 const fetch = require('node-fetch');
-const MongooseDBConnector = require("../src/mongoosedb/MongooseDBConnector");
+const MongooseDBConnector = require("../src/mongodb/MongooseDBConnector");
 const RecordManager = require("../src/controller/RecordManager");
 const Server = require("../src/Server");
 const RESPONSE_CODES = require("../src/utils/RESPONSE_CODES.json");
@@ -10,9 +10,6 @@ let mongooseDBConnector;
 let recordManager;
 let serverHandle;
 
-// we need to initialize Mongo and HTTP servers before
-// before starting the tests. We will use genuine classes
-// not mockups.
 beforeAll(() => {
   dotenv.config();
   mongooseDBConnector = new MongooseDBConnector();
@@ -26,8 +23,6 @@ beforeAll(() => {
   });
 });
 
-// we need to close DB and HTTPServer connections properly
-// after all cases are completed
 afterAll(() => {
   mongooseDBConnector.disconnect();
   return serverHandle.close();

@@ -1,11 +1,3 @@
-/**
- * This helper holds the schema definitions and validators 
- * that may be required in the project. Since we are an 
- * HTTP server, it is extremely important to validate the 
- * request paramaters before sending them to inner bussiness
- * logic layers. 
- */
-
 const Joi = require('joi');
 
 function isValidGetDataParams(requestParams) {

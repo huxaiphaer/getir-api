@@ -41,4 +41,4 @@ npm run coverage;
 
 ### Contributors.
 
-(https://www.linkedin.com/in/lutaaya-huzaifah-idrisb186b490/)[Lutaaya Huzaifah Idris]
+[https://www.linkedin.com/in/lutaaya-huzaifah-idrisb186b490/](Lutaaya Huzaifah Idris)

@@ -1,14 +1,12 @@
 const dotenv = require("dotenv");
-const MongooseDBConnector = require("../src/mongoosedb/MongooseDBConnector");
+const MongooseDBConnector = require("../src/mongodb/MongooseDBConnector");
 const RecordManager = require("../src/controller/RecordManager");
 const RESPONSE_CODES = require("../src/utils/RESPONSE_CODES.json");
 
 let mongooseDBConnector;
 let recordManager;
 
-// we need to initialize Mongo and Record Manager
-// before starting the tests. We will use genuine classes
-// not mockups.
+
 beforeAll(() => {
   dotenv.config();
   mongooseDBConnector = new MongooseDBConnector();
@@ -18,14 +16,12 @@ beforeAll(() => {
   });
 });
 
-// we need to close DB connections properly
-// after all cases are completed
 afterAll(() => {
   mongooseDBConnector.disconnect();
 });
 
-describe("RecordManager Bussiness Logic Layer tests", () => {
-  test("valid case should return 2 records", () => {
+describe("RecordManager", () => {
+  test("should validate case should return 2 records", () => {
     const startDate = '2016-08-14';
     const endDate = '2018-02-02';
     const minCount = 2990;
@@ -37,7 +33,7 @@ describe("RecordManager Bussiness Logic Layer tests", () => {
       });
   });
 
-  test("should get INVALID_REQUEST_PARAMETERS with missing params", () => {
+  test("should get invalid request params", () => {
     const startDate = undefined;
     const endDate = '2018-02-02';
     const minCount = 2990;
@@ -51,7 +47,7 @@ describe("RecordManager Bussiness Logic Layer tests", () => {
       });
   });
 
-  test("should get INVALID_REQUEST_PARAMETERS when minCount is greater than maxCount", () => {
+  test("should get invalid request params when minCount is greater than maxCount", () => {
     const startDate = '2016-08-14';
     const endDate = '2018-02-02';
     const minCount = 3100;
