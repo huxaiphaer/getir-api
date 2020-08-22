@@ -2,9 +2,9 @@
   "name": "getirchallenge",
   "version": "1.0.0",
   "description": "Getir APP",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node app.js",
     "lint": "eslint .",
     "test": "clear; jest --verbose",
     "coverage": "clear; jest --verbose --coverage"

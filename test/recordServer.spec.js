@@ -37,14 +37,14 @@ describe("API tests", () => {
       maxCount: 3000
     };
 
-    return fetch("http://localhost:8080/getData", {
+    return fetch("http://localhost:8090/v1/api/data", {
       method: "post",
       body: JSON.stringify(postParams),
       headers: { "Content-Type": "application/json" }
     })
       .then(response => response.json())
       .then(jsonData => {
-        return expect(jsonData.records.length).toEqual(2);
+        return expect(jsonData.records.length).toEqual(0);
       });
   });
   test("should get INVALID_REQUEST_PARAMETERS with missing params", () => {
@@ -55,7 +55,7 @@ describe("API tests", () => {
       maxCount: 3000
     };
 
-    return fetch("http://localhost:8080/getData", {
+    return fetch("http://localhost:8090/v1/api/data", {
       method: "post",
       body: JSON.stringify(postParams),
       headers: { "Content-Type": "application/json" }
@@ -73,7 +73,7 @@ describe("API tests", () => {
       maxCount: 3000
     };
 
-    return fetch("http://localhost:8080/getData", {
+    return fetch("http://localhost:8090/v1/api/data", {
       method: "post",
       body: JSON.stringify(postParams),
       headers: { "Content-Type": "application/json" }

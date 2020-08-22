@@ -26,6 +26,15 @@ PORT
 npm run start
 ```
 
+After running the command , then test the endpoint below with the port number you configured e.g :
+
+```
+http://localhost:8090/v1/api/data
+```
+
+The above endpoint uses a **POST** method.
+
+
 ### Run tests locally.
 
 Running the tests of the project :
