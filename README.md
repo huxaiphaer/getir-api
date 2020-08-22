@@ -36,6 +36,13 @@ http://localhost:8090/v1/api/data
 
 The above endpoint uses a **POST** method.
 
+### Accessing the heroku link :
+
+This is the hosted endpoint :
+```
+https://getir-app-huxy.herokuapp.com/v1/api/data
+```
+
 
 ### Run tests locally.
 
