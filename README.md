@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/huxaiphaer/getir-api.svg?branch=master)](https://travis-ci.com/huxaiphaer/getir-api)
+[![Build Status](https://travis-ci.com/huxaiphaer/getir-api.svg?branch=develop)](https://travis-ci.com/huxaiphaer/getir-api)
 
 # GETIR API
  
