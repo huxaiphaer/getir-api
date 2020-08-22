@@ -23,7 +23,7 @@ PORT
 3. Then run the project after setting all the above.
 
 ```
-npm run start;
+npm run start
 ```
 
 ### Run tests locally.
@@ -31,14 +31,14 @@ npm run start;
 Running the tests of the project :
 
 ```
-npm run test;
+npm run test
 ```
 Running with coverage :
 
 ```
-npm run coverage;
+npm run coverage
 ```
 
 ### Contributors.
 
-[https://www.linkedin.com/in/lutaaya-huzaifah-idrisb186b490/](Lutaaya Huzaifah Idris)
+* [Lutaaya Idris](https://github.com/huxaiphaer)

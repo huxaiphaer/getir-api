@@ -1,5 +1,5 @@
 const RESPONSE_CODES = require("../utils/RESPONSE_CODES.json");
-const validators = require("../utils/JoiSchemaValidatorHelper");
+const validators = require("../utils/joiSchemaValidatorHelper");
 
 module.exports = function (_dbConnector) {
 

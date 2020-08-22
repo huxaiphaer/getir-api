@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
 const fetch = require('node-fetch');
-const MongooseDBConnector = require("../src/mongodb/MongooseDBConnector");
+const MongooseDBConnector = require("../src/mongodb/mongooseDBConnector");
 const RecordManager = require("../src/controller/RecordManager");
 const Server = require("../src/Server");
 const RESPONSE_CODES = require("../src/utils/RESPONSE_CODES.json");

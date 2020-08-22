@@ -1,4 +1,4 @@
-const MongooseDBConnector = require("./src/mongodb/MongooseDBConnector");
+const MongooseDBConnector = require("./src/mongodb/mongooseDBConnector");
 const RecordManager = require("./src/controller/RecordManager");
 const Server = require("./src/Server");
 const dotenv = require("dotenv");

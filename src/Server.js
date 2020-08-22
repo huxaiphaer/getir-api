@@ -32,7 +32,7 @@ module.exports = function (_recordManager) {
   }
 
   function registerEndPoints() {
-    app.post("/getData", handleGetData.bind(this));
+    app.post("/v1/api/data", handleGetData.bind(this));
   }
 
   this.listen = function () {
